@@ -1,0 +1,259 @@
+$colorGold: #DCCA87;
+$textColor: #AAA;
+$bgColor: #0C0B08;
+$transition: 0.35s;
+$mainFamily: "Cormorant Upright";
+$secondFont: "open sans";
+$max_Ipad_Mob_Media: "max-width: 821px";
+$mob_Media: "max-width: 425px";
+$ipad_Media: "(min-width: 426px) and (max-width: 820px)";
+$max_media: "min-width: 1921px";
+$mid_Media: "(min-width: 822px) and (max-width: 1919px)";
+$all_Medias: "max-width: 1919px";
+html {
+  scroll-behavior: smooth;
+}
+* {
+  box-sizing: border-box;
+  text-transform: capitalize;
+}
+// Start elements rules
+body {
+  font-family: $mainFamily;
+}
+img {
+  user-select: none;
+}
+p {
+  font-family: $secondFont;
+  color: $textColor;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 28px;
+}
+h1 {
+  font-size: 90px !important;
+  font-weight: 700 !important;
+  line-height: 117px;
+  color: $colorGold;
+  @media ($max_Ipad_Mob_Media) {
+    font-size: 80px !important;
+    line-height: 80px;
+  }
+}
+h2 {
+  font-size: 64px !important;
+  font-weight: 600 !important;
+  line-height: 83.2px;
+  color: $colorGold;
+  @media ($max_Ipad_Mob_Media) {
+    font-size: 45px !important;
+    line-height: 58.5px;
+  }
+}
+h3 {
+  font-size: 45px !important;
+  font-weight: 600 !important;
+  line-height: 58.5px;
+  color: white;
+
+}
+h4 {
+  font-size: 32px !important;
+  font-weight: 400 !important;
+  line-height: 41.6px;
+  color: $colorGold;
+}
+h5 {
+  font-size: 23px !important;
+  font-weight: 700 !important;
+  line-height: 29.9px;
+  color: white;
+}
+h6 {
+  font-size: 16px !important;
+  font-weight: 400;
+  line-height: 28px;
+  color: $textColor;
+  font-family: $secondFont;
+}
+// End elements rules
+
+/* Start scrollbar */
+::-webkit-scrollbar {
+	width: 20px;
+}
+::-webkit-scrollbar-track {
+	background-color: $bgColor;
+}
+::-webkit-scrollbar-thumb {
+  height: 300px;
+	background-color: $textColor;
+}
+::-webkit-scrollbar-thumb:hover {
+	background-color: $colorGold;
+}
+/* End scrollbar */
+
+// start components 
+.spoon {
+  position: relative;
+  width: 40px;
+  height: 9px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  @media ($max_Ipad_Mob_Media) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  span {
+    width: 13px;
+    height: 8px;
+    border-radius: 50%;
+    position: relative;
+    right: -26px;
+    border: 1px solid $colorGold;
+    display: block;
+    &:before, &:after {
+      content: "";
+      display: block;
+      position: relative;
+    }
+    &:before {
+      background: $colorGold;
+      width: 5px;
+      height: 1.8px;
+      top: 2.5px;
+      left: -5.2px;
+    }
+    &:after {
+      width: 22px;
+      height: 3px;
+      border: 1px solid $colorGold;
+      left: -26.5px;
+    }
+  }
+}
+.btn {
+  width: fit-content;
+  height: fit-content;
+  font-family: $mainFamily;
+  display: block;
+  color: black;
+  font-weight: 700;
+  font-size: 16px;
+  padding: 8px 32px;
+  background-color: $colorGold;
+  transition: $transition;
+  user-select: none;
+  &:hover {
+    background-color: transparent;
+    color: $colorGold;
+    outline: 2px solid $colorGold
+  }
+}
+.img {
+  $width: 667px;
+  $box: 65.2% * $width;
+  width: $width;  
+  height: 736px;
+  position: relative;
+  &::before, &::after {
+    content: "";
+    display: block;
+    // width:  $box;  
+    // height: 667px * 65.2%;
+    position: absolute;
+    background-color: $colorGold;
+  }
+  &::before {
+    top: 0;
+    right: 0;
+  }
+  &::after {
+    bottom: 0;
+    left: 0;
+  }
+  img {
+    width: 619px;
+    height: 688px;
+    z-index: 2;
+    border-top-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+    @extend .absolute-center;
+  }
+}
+.word-shape {
+  width: fit-content;
+  transform: translateY(60px);
+  color: $colorGold;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 26px;
+  display: block;
+  user-select: none;
+  margin-left: auto;
+  &.scroll {
+    bottom: 0;
+  }
+  &::before {
+    content: "";
+    width: 2px;
+    height: 61px;
+    display: block;
+    position: absolute;
+    top: -85px;
+    left: 50%;
+    background: linear-gradient(to bottom, #DCCA87, #DCCA87, rgba(220, 202, 135, 0.24));
+  }
+}
+.absolute-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+//Start helper classes
+.w-70 {
+  @media (min-width: 1921px) {
+    width: 1300px;
+  }
+  
+  @media (max-width: 1920px) {
+    width: 70%;
+  }
+  
+  margin: 0 auto;
+}
+.p-y-128 {
+  padding: 128px 0;
+  @media ($max_Ipad_Mob_Media) {
+    padding: 70px 0;
+  }
+}
+.fs-16 {
+  font-size: 16px;
+}
+.color-gold {
+  color: $colorGold;
+}
+.open-sans {
+  font-family: $secondFont;
+}
+.text-color  {
+  color: $textColor;
+}
+.bg-main {
+  background-color: $bgColor;
+}
+.borderGold {
+  border: 2px solid rgba($colorGold, 20%);
+}
+// End helper classes
+%background {
+  background-position: center;
+  background-size: contain;
+  @media ($max_Ipad_Mob_Media) {
+    background-size: cover;
+  }
+}
