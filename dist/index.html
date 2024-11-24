@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- import icons files -->
+  <link rel="stylesheet" href="../app/src/css/all.css">
+  <link rel="stylesheet" href="../app/src/css/all.min.css">
+  <!-- import font Cormorant Upright -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Upright:wght@300;400;500;600;700&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <!-- import font open sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Upright:wght@300;400;500;600;700&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+    rel="stylesheet">
+  <!-- import tailwind framework by dcn -->
+  <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+  <!-- import js file -->
+  <script type="module" src="../app/src/script/script.js" defer></script>
+  <!-- import tailwind input file -->
+  <link rel="stylesheet" href="output.css">
+  <!-- import main css style file -->
+  <link rel="stylesheet" href="main.css">
+  <title>gericht</title>
+</head>
+
+<body>
+  <div class="page-container">
+    <!-- Start header -->
+    <nav id="nav" class="w-full flex items-center text-white ">
+      <a href="" class="logo font-bold uppercase order-1">gericht</a>
+      <ul id="links" class="flex gap-8 order-2 fs-16">
+        <!-- added by js -->
+      </ul>
+      <div class="account relative order-3 font-semibold fs-16">
+        <a href="" class="mr-[50px] relative">Log in / registration</a>
+        <a href="" class="inline-block">book table</a>
+      </div>
+    </nav>
+    <!-- End header -->
+    <!-- Start landing -->
+    <div class="landing">
+      <div class="poss relative mx-auto">
+        <div class="holder w-70 relative mx-auto flex justify-between items-center gap-8">
+          <div class="text flex flex-col gap-8">
+            <div class="head">
+              <h5>Chase the new Flavour</h5>
+              <div class="spoon">
+                <span></span>
+              </div>
+              <h1>The key to Fine dining</h1>
+            </div>
+            <p>Sit tellus lobortis sed senectus vivamus molestie. Condimentum volutpat morbi facilisis quam scelerisque
+              sapien. Et, penatibus aliquam amet tellus </p>
+            <button class="btn">Explore Menu</button>
+          </div>
+          <div class="img ">
+            <img src="../app/assets/home-img.png" alt="">
+          </div>
+        </div>
+        <span id="scroll-down" class="word-shape scroll relative">scroll</span>
+        <div
+          class="slider-count fs-16 open-sans flex gap-2 justify-between items-center relative bottom-0 mx-auto text-white font-semibold ">
+          <span>01</span>
+          <div class="separator"></div>
+          <span>02</span>
+          <span>03</span>
+          <span>04</span>
+        </div>
+        <div class="left-word flex gap-10">
+          <span>#Bar</span>
+          <span>#Gericht</span>
+        </div>
+      </div>
+    </div>
+    <!-- End landing -->
+    <!-- Start about -->
+    <div class="about p-y-128 flex items-center">
+      <div class="holder w-70 relative flex justify-between items-center">
+        <img class="absolute-center" src="../app/assets/knife.png" alt="">
+        <div class="text z-10 flex flex-col gap-8 text-right">
+          <div class="head">
+            <h2>about us</h2>
+            <div class="spoon scale-[-1]">
+              <span></span>
+            </div>
+          </div>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis pharetra adipiscing ultrices vulputate
+            posuere tristique. In sed odio nec aliquet eu proin mauris et.</p>
+          <button class="btn ml-auto">know more</button>
+        </div>
+        <div class="text z-10 flex flex-col gap-8 text-left">
+          <div class="head">
+            <h2>our history</h2>
+            <div class="spoon">
+              <span></span>
+            </div>
+          </div>
+          <p>Adipiscing tempus ullamcorper lobortis odio tellus arcu volutpat. Risus placerat morbi volutpat habitasse
+            interdum mi aliquam In sed odio nec aliquet.</p>
+          <button class="btn">know more</button>
+        </div>
+      </div>
+    </div>
+    <!-- End about -->
+    <!-- Start menu -->
+    <div class="menu p-y-128 bg-main">
+      <div class="head text-center mb-16">
+        <h5 class="font-bold text-white">
+          Menu that fits you palatte</h5>
+        <div class="spoon mx-auto">
+          <span></span>
+        </div>
+        <h2>Today’s Special</h2>
+      </div>
+      <div class="holder w-70 flex items-center">
+        <div class="list left">
+          <h3 class="text-center mb-12">
+            juice & drinks </h3>
+          <ul class=" list-none flex flex-col gap-10">
+            <li class="w-full">
+              <div class="item flex justify-between relative items-center gap-8">
+                <h5>king juice</h5> <span class="line"></span>
+                <h5 class="text-right">$56</h5>
+              </div>
+              <h6 class="mt-2">AR | 800 ml</h6>
+            </li>
+            <li class="w-full">
+              <div class="item flex justify-between relative items-center gap-8">
+                <h5>blue berry</h5> <span class="line"></span>
+                <h5 class="text-right">$59</h5>
+              </div>
+              <h6 class="mt-2">AU | Bottle</h6>
+            </li>
+            <li class="w-full">
+              <div class="item flex justify-between relative items-center gap-8">
+                <h5>Rosé tea</h5> <span class="line"></span>
+                <h5 class="text-right">$44</h5>
+              </div>
+              <h6 class="mt-2">FR | 750 ml</h6>
+            </li>
+            <li class="w-full">
+              <div class="item flex justify-between relative items-center gap-8">
+                <h5>chocolate coffee</h5> <span class="line"></span>
+                <h5 class="text-right">$31</h5>
+              </div>
+              <h6 class="mt-2">CA | 750 ml</h6>
+            </li>
+            <li class="w-full">
+              <div class="item flex justify-between relative items-center gap-8">
+                <h5>freezed juice</h5> <span class="line"></span>
+                <h5 class="text-right">$26</h5>
+              </div>
+              <h6 class="mt-2">IE | 750 ml</h6>
+            </li>
+          </ul>
+        </div>
+        <img class="rounded-xl" src="../app/assets/drinks.png" alt="">
+        <div class="list right">
+          <h3 class="text-center mb-12">
+            Cocktails </h3>
+          <ul class=" list-none flex flex-col gap-10">
+            <li class="w-full">
+              <div class="item flex justify-between relative items-center gap-8">
+                <h5>Aperol Spritz</h5> <span class="line"></span>
+                <h5 class="text-right">$20</h5>
+              </div>
+              <h6 class="mt-2">Aperol | Villa Marchesi prosecco | soda | 30ml</h6>
+            </li>
+            <li class="w-full">
+              <div class="item flex justify-between relative items-center gap-8">
+                <h5>Dark 'N' Stormy</h5> <span class="line"></span>
+                <h5 class="text-right">$16</h5>
+              </div>
+              <h6 class="mt-2">Dark rum | Ginger beer | Slice of lime.</h6>
+            </li>
+            <li class="w-full">
+              <div class="item flex justify-between relative items-center gap-8">
+                <h5>Daiquiri</h5> <span class="line"></span>
+                <h5 class="text-right">$10</h5>
+              </div>
+              <h6 class="mt-2">Rum | Citrus juice | Sugar</h6>
+            </li>
+            <li class="w-full">
+              <div class="item flex justify-between relative items-center gap-8">
+                <h5>Old Fashioned</h5> <span class="line"></span>
+                <h5 class="text-right">$31</h5>
+              </div>
+              <h6 class="mt-2">Bourbon | Brown sugar | Angostura Bitters</h6>
+            </li>
+            <li class="w-full">
+              <div class="item flex justify-between relative items-center gap-8">
+                <h5>Negroni</h5> <span class="line"></span>
+                <h5 class="text-right ">$26</h5>
+              </div>
+              <h6 class="mt-2">Gin | Sweet Vermouth | Campari | Orange garnish</h6>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <button class="btn mt-16 text-center mx-auto">view more</button>
+    </div>
+    <!-- End menu -->
+    <!-- Start chef word -->
+    <div class="chef-word relative">
+      <div class="holder p-y-128 w-70 gap[96px] flex justify-between items-center ">
+        <div class="img">
+          <img src="../app/assets/chef-img.png" alt="">
+        </div>
+        <div class="content relative flex flex-col gap-16">
+          <div class="head">
+            <h5>Chef’s Word</h5>
+            <div class="spoon">
+              <span></span>
+            </div>
+            <h2>What we believe in</h2>
+          </div>
+          <p class="italic">
+            <img src="../app/assets/quotes.png" alt="" class="quotes inline-block">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit auctor sit .
+            auctor sit iaculis in arcu. Vulputate nulla lobortis mauris eget sit. Nulla scelerisque scelerisque congue
+            ac consequat, aliquam molestie lectus eu. Congue iaculis integer curabitur semper sit nunc.
+          </p>
+          <div class="about-chef">
+            <h4 class="mb-2">Kevin Luo</h4>
+            <h6>Chef & Founder</h6>
+          </div>
+          <img class="chef-sign" src="../app/assets/chef-sign.png" alt="">
+        </div>
+      </div>
+    </div>
+    <!-- End chef word -->
+    <!-- Start video -->
+    <div class="video w-full">
+      <video src=""></video>
+      <img src="../app/assets/playVid.png" alt="" class="vidState">
+      <span></span>
+    </div>
+    <!-- End video -->
+    <!-- Start Our Laurels -->
+    <div class="our-laurels relative p-y-128">
+      <div class="our-laurels-shape absolute">
+        <div class="circle-shape relative flex justify-center items-center">
+          <div class="spoon">
+            <span></span>
+          </div>
+          <div class="spoon">
+            <span></span>
+          </div>
+        </div>
+      </div>
+      <div class="holder w-70 flex justify-between items-center">
+        <div class="content flex flex-col gap-16">
+          <div class="head">
+            <h5>Awards & recognition</h5>
+            <div class="spoon">
+              <span></span>
+            </div>
+            <h2>Our Laurels</h2>
+          </div>
+          <div class="laurels flex flex-wrap gap-x-8 gap-y-16">
+            <div class="item flex gap-3">
+              <img src="../app/assets/number-2.png" alt="">
+              <div class="text">
+                <h5>Bib Gourmond</h5>
+                <p>Lorem ipsum dolor sit amet, consectetur.</p>
+              </div>
+            </div>
+            <div class="item flex gap-3">
+              <img src="../app/assets/number-1.png" alt="">
+              <div class="text">
+                <h5>Rising Star</h5>
+                <p>Lorem ipsum dolor sit amet, consectetur.</p>
+              </div>
+            </div>
+            <div class="item flex gap-3">
+              <img src="../app/assets/number-5.png" alt="">
+              <div class="text">
+                <h5>AA Hospitality</h5>
+                <p>Lorem ipsum dolor sit amet, consectetur.</p>
+              </div>
+            </div>
+            <div class="item flex gap-3">
+              <img src="../app/assets/number-3.png" alt="">
+              <div class="text">
+                <h5>Outstanding Chef</h5>
+                <p>Lorem ipsum dolor sit amet, consectetur.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <img src="../app/assets/our-laurels.png" alt="">
+      </div>
+    </div>
+    <!-- End Our Laurels -->
+    <!-- Start instagram corner -->
+    <div class="insta">
+      <div class="holder flex gap-16 justify-between items-center py-16">
+        <div class="content flex flex-col gap-6 ">
+          <div class="head">
+            <h5>Instagram</h5>
+            <div class="spoon">
+              <span></span>
+            </div>
+            <h2>Photo Gallery</h2>
+          </div>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Volutpat mattis ipsum turpis elit elit scelerisque
+            egestas mu.</p>
+          <button class="btn">View More</button>
+        </div>
+        <div class="photos flex gap-8">
+          <div class="insta-photo">
+            <img src="../app/assets/photo-1.png" alt="">
+            <div class="over-lay"></div>
+            <div class="inst-i"></div>
+          </div>
+          <div class="insta-photo">
+            <img src="../app/assets/photo-2.png" alt="">
+            <div class="over-lay"></div>
+            <div class="inst-i"></div>
+          </div>
+          <div class="insta-photo">
+            <img src="../app/assets/photo-3.png" alt="">
+            <div class="over-lay"></div>
+            <div class="inst-i"></div>
+          </div>
+          <div class="insta-photo">
+            <img src="../app/assets/photo-4.png" alt="">
+            <div class="over-lay"></div>
+            <div class="inst-i"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End instagram corner -->
+    <!-- Start find us -->
+    <div class="find-us">
+      <div class="holder w-full p-y-128 flex justify-between items-center gap-8">
+        <div class="content flex flex-col gap-16">
+          <div class="head">
+            <h5>Contact</h5>
+            <div class="spoon">
+              <span></span>
+            </div>
+            <h2>Find Us</h2>
+          </div>
+          <div class="text">
+            <p class="mb-8">Lane Ends Bungalow, Whatcroft Hall Lane, Rudheath, CW9 7SG</p>
+            <div class="dates flex flex-col gap-4">
+              <h5>Opening Hours</h5>
+              <h6 class="text-white">Mon - Fri: 10:00 am - 02:00 am</h6>
+              <h6 class="text-white">Sat - Sun: 10:00 am - 03:00 am</h6>
+            </div>
+          </div>
+          <button class="btn">Visit Us</button>
+        </div>
+        <div class="img">
+          <img src="../app/assets/limon-juice.png" alt="">
+        </div>
+      </div>
+    </div>
+    <!-- End find us -->
+    <!-- Start footer -->
+    <footer class="footer relative">
+      Start subscribe
+      <div class="subscribe">
+        <div class="holder w-70 borderGold relative p-16 flex flex-col gap-16 justify-between items-center">
+          <div class="text text-center">
+            <div class="head mb-6">
+              <h5>Newsletter</h5>
+              <div class="spoon mx-auto">
+                <span></span>
+              </div>
+              <h2>Subscribe to Our Newsletter</h2>
+            </div>
+            <h6>And never miss latest Updates!</h6>
+          </div>
+          <div class="input flex items-center justify-center gap-8 ">
+            <input class="flex-grow bg-transparent borderGold" type="email" name="" id="" placeholder="Email Address">
+            <button class="btn">Subscribe</button>
+          </div>
+        </div>
+      </div>
+      End subscribe
+      <div class="holder w-70 p-y-128 flex justify-between gap-4">
+        <span id="scroll-top" class="word-shape top absolute">top</span>
+        <div class="box text-center">
+          <h4 class="text-white">Contact Us</h4>
+          <div>
+            <h6 class="mt-6 mb-2">9 W 53rd St, New York, NY 10019, USA</h6>
+            <h6>+1 212-344-1230</h6>
+            <h6>+1 212-555-1230</h6>
+          </div>
+        </div>
+        <div class="box middle text-center">
+          <h2 class="uppercase">gericht</h2>
+          <h6 class="text-white">"The best way to find yourself is to lose yourself in the service of others.”</h6>
+          <div class="spoon">
+            <span></span>
+          </div>
+          <div class="socials flex items-center justify-center gap-6">
+            <img src="../app/assets/u_facebook-f.svg" alt="" class="i">
+            <img src="../app/assets/twitter.svg" alt="" class="i">
+            <img src="../app/assets/insta.svg" alt="" class="i">
+          </div>
+        </div>
+        <div class="box text-center">
+          <h4 class="text-white">Working Hours</h4>
+          <div>
+            <h6 class="mt-6 mb-2">Monday-Friday:</h6>
+            <h6>08:00 am -12:00 am</h6>
+            <h6>Saturday-Sunday:</h6>
+            <h6>07:00am -11:00 pm</h6>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- End footer -->
+  </div>
+  </div>
+</body>
+
+</html>
+
+
+<!-- design link  -->
+<!-- https://www.figma.com/file/yvClSI9AZBRX8UaaGEByF3/Modern-UI%2FUX%3A-Gericht?type=design&node-id=0-21&mode=design&t=H7wvrI7AJRlo0KKJ-0 -->

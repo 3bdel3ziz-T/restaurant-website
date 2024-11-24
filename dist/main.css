@@ -1,3 +1,15 @@
+.about {
+  background-image: url(../../assets/BG-1.png);
+}
+
+.chef-word, .our-laurels {
+  background-image: url(../../assets/BG-2.png);
+}
+
+footer {
+  background-image: url(../../assets/BG-3.png);
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -19,7 +31,7 @@ img {
 
 p {
   font-family: "open sans";
-  color: #AAA;
+  color: #aaa;
   font-size: 16px;
   font-weight: 400;
   line-height: 28px;
@@ -29,7 +41,7 @@ h1 {
   font-size: 90px !important;
   font-weight: 700 !important;
   line-height: 117px;
-  color: #DCCA87;
+  color: #dcca87;
 }
 @media (max-width: 821px) {
   h1 {
@@ -42,7 +54,7 @@ h2 {
   font-size: 64px !important;
   font-weight: 600 !important;
   line-height: 83.2px;
-  color: #DCCA87;
+  color: #dcca87;
 }
 @media (max-width: 821px) {
   h2 {
@@ -62,7 +74,7 @@ h4 {
   font-size: 32px !important;
   font-weight: 400 !important;
   line-height: 41.6px;
-  color: #DCCA87;
+  color: #dcca87;
 }
 
 h5, .our-laurels .our-laurels-shape .circle-shape span {
@@ -76,7 +88,7 @@ footer .subscribe .holder .input input[type=email]::-moz-placeholder {
   font-size: 16px !important;
   font-weight: 400;
   line-height: 28px;
-  color: #AAA;
+  color: #aaa;
   font-family: "open sans";
 }
 
@@ -84,7 +96,7 @@ h6, footer .subscribe .holder .input input[type=email]::placeholder {
   font-size: 16px !important;
   font-weight: 400;
   line-height: 28px;
-  color: #AAA;
+  color: #aaa;
   font-family: "open sans";
 }
 
@@ -94,19 +106,18 @@ h6, footer .subscribe .holder .input input[type=email]::placeholder {
 }
 
 ::-webkit-scrollbar-track {
-  background-color: #0C0B08;
+  background-color: #0c0b08;
 }
 
 ::-webkit-scrollbar-thumb {
   height: 300px;
-  background-color: #AAA;
+  background-color: #aaa;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: #DCCA87;
+  background-color: #dcca87;
 }
 
-/* End scrollbar */
 .spoon {
   position: relative;
   width: 40px;
@@ -129,7 +140,7 @@ h6, footer .subscribe .holder .input input[type=email]::placeholder {
   top: 50%;
   right: 0;
   border: 1px solid;
-  border-color: #DCCA87;
+  border-color: #dcca87;
   display: inline-block;
 }
 .spoon span:before, .spoon span:after {
@@ -140,7 +151,7 @@ h6, footer .subscribe .holder .input input[type=email]::placeholder {
   top: 50%;
 }
 .spoon span:before {
-  background: #DCCA87;
+  background: #dcca87;
   width: 5px;
   height: 1.8px;
   left: -5.2px;
@@ -149,7 +160,7 @@ h6, footer .subscribe .holder .input input[type=email]::placeholder {
   width: 22px;
   height: 3px;
   border: 1px solid;
-  border-color: #DCCA87;
+  border-color: #dcca87;
   right: calc(100% + 5px);
 }
 
@@ -164,7 +175,7 @@ h6, footer .subscribe .holder .input input[type=email]::placeholder {
   font-weight: 700;
   font-size: 16px;
   padding: 8px 32px;
-  background-color: #DCCA87;
+  background-color: #dcca87;
   transition: 0.35s;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -172,8 +183,8 @@ h6, footer .subscribe .holder .input input[type=email]::placeholder {
 }
 .btn:hover {
   background-color: transparent;
-  color: #DCCA87;
-  outline: 2px solid #DCCA87;
+  color: #dcca87;
+  outline: 2px solid #dcca87;
 }
 
 .img {
@@ -187,7 +198,7 @@ h6, footer .subscribe .holder .input input[type=email]::placeholder {
   width: 445px;
   height: 445px;
   position: absolute;
-  background-color: #DCCA87;
+  background-color: #dcca87;
 }
 .img::before {
   top: 0;
@@ -209,7 +220,7 @@ h6, footer .subscribe .holder .input input[type=email]::placeholder {
   width: -moz-fit-content;
   width: fit-content;
   transform: translateY(60px);
-  color: #DCCA87;
+  color: #dcca87;
   text-transform: uppercase;
   font-weight: bold;
   font-size: 26px;
@@ -230,10 +241,10 @@ h6, footer .subscribe .holder .input input[type=email]::placeholder {
   position: absolute;
   top: -85px;
   left: 50%;
-  background: linear-gradient(to bottom, #DCCA87, #DCCA87, rgba(220, 202, 135, 0.24));
+  background: linear-gradient(to bottom, #dcca87, #dcca87, rgba(220, 202, 135, 0.24));
 }
 
-.absolute-center, .insta .photos .insta-photo .inst-i::before, .insta .photos .insta-photo .inst-i, .video .vidState + span, .video .vidState, .about .holder::before, .img img {
+.absolute-center, .about .holder::before, .video .vidState, .video .vidState + span, .insta .photos .insta-photo .inst-i, .insta .photos .insta-photo .inst-i::before, .img img {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -268,7 +279,7 @@ h6, footer .subscribe .holder .input input[type=email]::placeholder {
 }
 
 .color-gold {
-  color: #DCCA87;
+  color: #dcca87;
 }
 
 .open-sans {
@@ -276,24 +287,24 @@ h6, footer .subscribe .holder .input input[type=email]::placeholder {
 }
 
 .text-color {
-  color: #AAA;
+  color: #aaa;
 }
 
 .bg-main {
-  background-color: #0C0B08;
+  background-color: #0c0b08;
 }
 
 .borderGold, .insta .photos .insta-photo {
   border: 2px solid rgba(220, 202, 135, 0.2);
 }
 
-.our-laurels, .chef-word, .about {
+.about, .chef-word, .our-laurels {
   background-position: center;
   background-size: cover;
 }
 
 .page-container {
-  background-color: #0C0B08;
+  background-color: #0c0b08;
 }
 
 nav {
@@ -341,7 +352,7 @@ nav #links li {
   }
 }
 nav #links li:hover {
-  color: #DCCA87;
+  color: #dcca87;
 }
 nav #links li a {
   font-weight: 400;
@@ -368,7 +379,7 @@ nav .account a:first-child::before {
 }
 
 .landing {
-  background: #0C0B08;
+  background: #0c0b08;
   height: -moz-fit-content;
   height: fit-content;
   padding-bottom: 128px;
@@ -401,7 +412,7 @@ nav .account a:first-child::before {
 .landing .poss .slider-count .separator {
   width: 16px;
   height: 1px;
-  background: #DCCA87;
+  background: #dcca87;
 }
 .landing .poss .left-word {
   transform: rotate(-90deg) translateY(-50%);
@@ -465,9 +476,6 @@ nav .account a:first-child::before {
   }
 }
 
-.about {
-  background-image: url(../../images/BG-1.png);
-}
 @media (max-width: 425px) {
   .about {
     height: 100vh;
@@ -580,7 +588,7 @@ nav .account a:first-child::before {
 }
 
 .menu {
-  background: #0C0B08;
+  background: #0c0b08;
 }
 .menu .menu-header {
   display: flex;
@@ -623,7 +631,7 @@ nav .account a:first-child::before {
   }
 }
 .menu .holder .list h5, .menu .holder .list .our-laurels .our-laurels-shape .circle-shape span, .our-laurels .our-laurels-shape .circle-shape .menu .holder .list span {
-  color: #DCCA87;
+  color: #dcca87;
 }
 .menu .holder .list h5.text-right, .menu .holder .list .our-laurels .our-laurels-shape .circle-shape span.text-right, .our-laurels .our-laurels-shape .circle-shape .menu .holder .list span.text-right {
   color: white;
@@ -663,7 +671,6 @@ nav .account a:first-child::before {
 .chef-word {
   height: -moz-fit-content;
   height: fit-content;
-  background-image: url(../../images/BG-2.png);
 }
 .chef-word .holder {
   height: 1044px;
@@ -723,7 +730,7 @@ nav .account a:first-child::before {
 
 .video {
   height: 723px;
-  background-color: #AAA;
+  background-color: #aaa;
   position: relative;
 }
 .video .vidState {
@@ -734,7 +741,7 @@ nav .account a:first-child::before {
 }
 .video .vidState + span {
   border-radius: 50%;
-  border: 3px solid #DCCA87;
+  border: 3px solid #dcca87;
   display: block;
   margin-left: -5px;
   width: 150px;
@@ -742,7 +749,6 @@ nav .account a:first-child::before {
 }
 
 .our-laurels {
-  background-image: url(../../images/BG-2.png);
   height: 947px;
 }
 @media (max-width: 1919px) {
@@ -812,7 +818,7 @@ nav .account a:first-child::before {
   border-radius: 50%;
 }
 .our-laurels .our-laurels-shape .circle-shape span {
-  color: #DCCA87;
+  color: #dcca87;
   font-weight: normal;
   display: block;
   width: 22.5px;
@@ -824,7 +830,7 @@ nav .account a:first-child::before {
 }
 @media (max-width: 821px) {
   .our-laurels .our-laurels-shape .circle-shape span {
-    color: #AAA;
+    color: #aaa;
   }
 }
 @media (max-width: 1919px) {
@@ -874,7 +880,7 @@ nav .account a:first-child::before {
   }
 }
 .our-laurels .content .laurels .item h5, .our-laurels .content .laurels .item .our-laurels-shape .circle-shape span, .our-laurels .our-laurels-shape .circle-shape .content .laurels .item span {
-  color: #DCCA87;
+  color: #dcca87;
 }
 .our-laurels .content .laurels .item img {
   width: 79px;
@@ -891,7 +897,7 @@ nav .account a:first-child::before {
 }
 
 .insta {
-  background-color: #0C0B08;
+  background-color: #0c0b08;
 }
 .insta .holder {
   margin-left: 110px;
@@ -930,10 +936,10 @@ nav .account a:first-child::before {
   width: 16px;
   height: 16px;
   border-radius: 50%;
-  background-color: #AAA;
+  background-color: #aaa;
 }
 .insta .holder .bullets .bullet.active {
-  background-color: #DCCA87;
+  background-color: #dcca87;
   width: 18px;
   height: 18px;
 }
@@ -1029,8 +1035,7 @@ nav .account a:first-child::before {
 }
 
 .find-us {
-  background-color: #0C0B08;
-  background-image: url(../../images/BG-2.png);
+  background-color: #0c0b08;
   padding-left: 310px;
   margin-right: 310px;
 }
@@ -1059,14 +1064,13 @@ nav .account a:first-child::before {
 }
 
 footer {
-  background-image: url(../../images/BG-3.png);
   margin-top: 208px;
   background-size: cover;
   height: -moz-fit-content;
   height: fit-content;
 }
 footer .subscribe .holder {
-  background: #0C0B08;
+  background: #0c0b08;
   height: -moz-fit-content;
   height: fit-content;
   box-shadow: 22px 30px 95px 1px rgba(0, 0, 0, 0.6980392157);
@@ -1090,7 +1094,7 @@ footer .subscribe .holder .input input[type=email]::placeholder {
   font-family: "Cormorant Upright";
 }
 footer .subscribe .holder .input input[type=email]:hover {
-  border: 2px solid #DCCA87;
+  border: 2px solid #dcca87;
   outline: none;
 }
 footer .word-shape.top {
@@ -1201,4 +1205,4 @@ footer > .holder .box.middle .socials .i {
   100% {
     transform: rotate(360deg);
   }
-}/*# sourceMappingURL=style.css.map */
+}

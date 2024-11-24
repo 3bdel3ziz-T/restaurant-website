@@ -1,0 +1,175 @@
+@use "variables" as *;
+
+// start components
+.spoon {
+  position: relative;
+  width: 40px;
+  height: 9px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  @media ($Mob_Ipad_Mid_Medias) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  span {
+    width: 13px;
+    height: 8px;
+    border-radius: 50%;
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%;
+    right: 0;
+    border: 1px solid;
+    border-color: $colorGold;
+    display: inline-block;
+    &:before,
+    &:after {
+      content: "";
+      display: inline-block;
+      position: absolute;
+      transform: translateY(-50%);
+      top: 50%;
+    }
+    &:before {
+      background: $colorGold;
+      width: 5px;
+      height: 1.8px;
+      left: -5.2px;
+    }
+    &:after {
+      width: 22px;
+      height: 3px;
+      border: 1px solid;
+      border-color: $colorGold;
+      right: calc(100% + 5px);
+    }
+  }
+}
+.btn {
+  width: fit-content;
+  height: fit-content;
+  font-family: $mainFamily;
+  display: block;
+  color: black;
+  font-weight: 700;
+  font-size: 16px;
+  padding: 8px 32px;
+  background-color: $colorGold;
+  transition: $transition;
+  user-select: none;
+  &:hover {
+    background-color: transparent;
+    color: $colorGold;
+    outline: 2px solid $colorGold;
+  }
+}
+.img {
+  width: 667px;
+  height: 736px;
+  position: relative;
+  &::before,
+  &::after {
+    content: "";
+    display: block;
+    width: 445px;
+    height: 445px;
+    position: absolute;
+    background-color: $colorGold;
+  }
+  &::before {
+    top: 0;
+    right: 0;
+  }
+  &::after {
+    bottom: 0;
+    left: 0;
+  }
+  img {
+    width: calc(100% - 48px);
+    height: calc(100% - 48px);
+    z-index: 2;
+    border-top-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+    @extend .absolute-center;
+  }
+}
+.word-shape {
+  width: fit-content;
+  transform: translateY(60px);
+  color: $colorGold;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 26px;
+  display: block;
+  user-select: none;
+  margin-left: auto;
+  &.scroll {
+    bottom: 0;
+  }
+  &::before {
+    content: "";
+    width: 2px;
+    height: 61px;
+    display: block;
+    position: absolute;
+    top: -85px;
+    left: 50%;
+    background: linear-gradient(
+      to bottom,
+      #dcca87,
+      #dcca87,
+      rgba(220, 202, 135, 0.24)
+    );
+  }
+}
+.absolute-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+//Start helper classes
+.w-70 {
+  @media (min-width: 1921px) {
+    width: 1300px;
+  }
+
+  @media (max-width: 1920px) {
+    width: 70%;
+  }
+
+  margin: 0 auto;
+}
+.p-y-128 {
+  padding: 128px 0;
+  @media ($ipad_Mob_Media) {
+    padding: 70px 0;
+  }
+}
+.fs-16 {
+  font-size: 16px;
+}
+.color-gold {
+  color: $colorGold;
+}
+.open-sans {
+  font-family: $secondFont;
+}
+.text-color {
+  color: $textColor;
+}
+.bg-main {
+  background-color: $bgColor;
+}
+.borderGold {
+  border: 2px solid rgba($colorGold, 20%);
+}
+// End helper classes
+%background {
+  background-position: center;
+  background-size: cover;
+}
+// End components
+.page-container {
+  background-color: $bgColor;
+}

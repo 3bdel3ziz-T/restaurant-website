@@ -1,0 +1,21 @@
+$colorGold: #dcca87;
+$textColor: #aaa;
+$bgColor: #0c0b08;
+$transition: 0.35s;
+$mainFamily: "Cormorant Upright";
+$secondFont: "open sans";
+$mob_Media: "max-width: 425px";
+$ipad_Media: "(min-width: 426px) and (max-width: 821px)";
+$ipad_Mob_Media: "max-width: 821px";
+$Mob_Ipad_Mid_Medias: "max-width: 1025px";
+$max_media: "max-width: 1919px";
+
+%BG-1 {
+  background-image: url(../../assets/BG-1.png);
+}
+%BG-2 {
+  background-image: url(../../assets/BG-2.png);
+}
+%BG-3 {
+  background-image: url(../../assets/BG-3.png);
+};
