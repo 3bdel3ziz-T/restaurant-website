@@ -1,11 +1,11 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./dist/*.{html,js}"],
+  content: ["./*.{html,js}"],
   theme: {
     extend: {
       animation: {
         floating: "float 5s ease-out infinite",
-        spinning: "spin 7s ease-out infinite",
+        spinning: "spin 7app/srcs ease-out infinite",
       },
       keyframes: {
         float: {
