@@ -4,9 +4,6 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- import icons files -->
-  <link rel="stylesheet" href="../app/src/css/all.css">
-  <link rel="stylesheet" href="../app/src/css/all.min.css">
   <!-- import font Cormorant Upright -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,275 +16,325 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Cormorant+Upright:wght@300;400;500;600;700&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
     rel="stylesheet">
-  <!-- import tailwind framework by dcn -->
-  <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+  <!-- import gsap cdn -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
   <!-- import js file -->
-  <script type="module" src="../app/src/script/script.js" defer></script>
+  <script type="module" src="script.js" defer></script>
   <!-- import tailwind input file -->
-  <link rel="stylesheet" href="output.css">
+  <link rel="stylesheet" href="./css/output.css">
   <!-- import main css style file -->
-  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="./css/main.css">
   <title>gericht</title>
 </head>
 
-<body>
-  <div class="page-container">
-    <!-- Start header -->
-    <nav id="nav" class="w-full flex items-center text-white ">
-      <a href="" class="logo font-bold uppercase order-1">gericht</a>
-      <ul id="links" class="flex gap-8 order-2 fs-16">
-        <!-- added by js -->
+<body class="overflow-x-hidden overflow-y-visible w-dvw h-fit">
+  <div
+    class="logo-box w-full h-72 flex items-center justify-center overflow-y-visible overflow-x-hidden absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center">
+    <span class="logo relative font-bold text-lg md:text-3xl lg:text-4xl uppercase block text-gold">gericht</span>
+  </div>
+  <!-- Start header -->
+  <div class="custom-container overflow-hidden">
+    <nav id="nav relative"
+      class="py-8 md:py-5 w-full flex flex-wrap items-center md:justify-between md:gap-2 gap-x-4 gap-y-2  justify-center text-white ">
+      <!-- <div class="logo-box relative"> -->
+      <a href=""
+        class="logo2 opacity-0 relative font-bold text-lg md:text-3xl lg:text-4xl uppercase text-gold">gericht</a>
+      <!-- </div> -->
+      <ul id="links" class="flex gap-5 text-lg">
+        <li class="link opacity-0"><a href=""
+            class="hover:text-gold duration-100 font-medium py-5 cursor-pointer text-nowrap">Home</a></li>
+        <li class="link opacity-0 hover:text-gold duration-100"><a href=""
+            class="hover:text-gold duration-100 font-medium py-5 cursor-pointer text-nowrap">pages</a></li>
+        <li class="link opacity-0 hover:text-gold duration-100"><a href=""
+            class="hover:text-gold duration-100 font-medium py-5 cursor-pointer text-nowrap">contact us</a></li>
+        <li class="link opacity-0 hover:text-gold duration-100"><a href=""
+            class="hover:text-gold duration-100 font-medium py-5 cursor-pointer text-nowrap">blog</a></li>
+        <li class="link opacity-0 hover:text-gold duration-100"><a href=""
+            class="hover:text-gold duration-100 font-medium py-5 cursor-pointer text-nowrap">landing</a></li>
       </ul>
-      <div class="account relative order-3 font-semibold fs-16">
-        <a href="" class="mr-[50px] relative">Log in / registration</a>
-        <a href="" class="inline-block">book table</a>
+      <div class="account opacity-0 font-semibold text-center flex gap-2 text-sm">
+        <a href="" class="w-24 hover:text-gold duration-100 text-nowrap">Log in / Sign up</a>
+        <a href="" class="w-24 hover:text-gold duration-100 text-right text-nowrap border-l-2">Book a table</a>
       </div>
     </nav>
-    <!-- End header -->
-    <!-- Start landing -->
-    <div class="landing">
-      <div class="poss relative mx-auto">
-        <div class="holder w-70 relative mx-auto flex justify-between items-center gap-8">
-          <div class="text flex flex-col gap-8">
-            <div class="head">
-              <h5>Chase the new Flavour</h5>
-              <div class="spoon">
-                <span></span>
-              </div>
-              <h1>The key to Fine dining</h1>
-            </div>
-            <p>Sit tellus lobortis sed senectus vivamus molestie. Condimentum volutpat morbi facilisis quam scelerisque
-              sapien. Et, penatibus aliquam amet tellus </p>
-            <button class="btn">Explore Menu</button>
+  </div>
+  <!-- End header -->
+  <!-- Start landing -->
+  <div class="landing md:h-fit gap-4 py-10 flex items-center justify-center flex-col relative">
+    <div
+      class="custom-container relative text-center flex-col-reverse md:text-left mx-auto flex gap-6 md:flex-row justify-between items-center ">
+      <div class="landing-text opacity-0 flex-1 flex flex-col gap-8 justify-center  items-center md:items-start">
+        <div class="head">
+          <h5>Chase the new Flavour</h5>
+          <div class="spoon w-full md:mx-auto">
+            <span></span>
           </div>
-          <div class="img ">
-            <img src="../app/assets/home-img.png" alt="">
-          </div>
+          <h1 class="">The key to Fine dining</h1>
         </div>
-        <span id="scroll-down" class="word-shape scroll relative">scroll</span>
-        <div
-          class="slider-count fs-16 open-sans flex gap-2 justify-between items-center relative bottom-0 mx-auto text-white font-semibold ">
-          <span>01</span>
-          <div class="separator"></div>
-          <span>02</span>
-          <span>03</span>
-          <span>04</span>
-        </div>
-        <div class="left-word flex gap-10">
-          <span>#Bar</span>
-          <span>#Gericht</span>
-        </div>
+        <p class="md:w-3/4">Sit tellus lobortis sed senectus vivamus molestie. Condimentum volutpat morbi facilisis quam
+          scelerisque
+          sapien. Et, penatibus aliquam amet tellus </p>
+        <button class="btn">Explore Menu</button>
+      </div>
+      <div class="landing-img opacity-0 img w-52 md:w-5/12 z-10 relative p-3 h-fit animate-float">
+        <img src="assets/home-img.png" class="object-cover" alt="">
       </div>
     </div>
-    <!-- End landing -->
-    <!-- Start about -->
-    <div class="about p-y-128 flex items-center">
-      <div class="holder w-70 relative flex justify-between items-center">
-        <img class="absolute-center" src="../app/assets/knife.png" alt="">
-        <div class="text z-10 flex flex-col gap-8 text-right">
-          <div class="head">
-            <h2>about us</h2>
-            <div class="spoon scale-[-1]">
-              <span></span>
-            </div>
+    <svg class="scroll-down opacity-0 relative h-8 w-8 block animate-bounce cursor-pointer fill-gold"
+      xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+      <path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path>
+    </svg>
+    <!-- <span id="scroll-down" class="word-shape absolute right-4 bottom-4 before:animate-bounce">scroll</span> -->
+  </div>
+  <!-- End landing -->
+
+  <!-- Start about -->
+  <div class="about BG-1 py-12 overflow-hidden h-dvh flex justify-center items-center">
+    <div class="custom-container relative flex justify-between items-between">
+      <img
+        class="knife-img absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-16 hidden lg:inline-block"
+        src="assets/knife.png" alt="">
+      <div class="right z-10 flex flex-col gap-8 text-right">
+        <div class="head">
+          <h2>about us</h2>
+          <div class="spoon scale-[-1]">
+            <span></span>
           </div>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis pharetra adipiscing ultrices vulputate
-            posuere tristique. In sed odio nec aliquet eu proin mauris et.</p>
-          <button class="btn ml-auto">know more</button>
         </div>
-        <div class="text z-10 flex flex-col gap-8 text-left">
-          <div class="head">
-            <h2>our history</h2>
-            <div class="spoon">
-              <span></span>
-            </div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis pharetra adipiscing ultrices vulputate
+          posuere tristique. In sed odio nec aliquet eu proin mauris et.</p>
+        <button class="btn ml-auto">know more</button>
+      </div>
+      <div class="left z-10 flex flex-col gap-8 text-left">
+        <div class="head">
+          <h2>our history</h2>
+          <div class="spoon">
+            <span></span>
           </div>
-          <p>Adipiscing tempus ullamcorper lobortis odio tellus arcu volutpat. Risus placerat morbi volutpat habitasse
-            interdum mi aliquam In sed odio nec aliquet.</p>
-          <button class="btn">know more</button>
         </div>
+        <p>Adipiscing tempus ullamcorper lobortis odio tellus arcu volutpat. Risus placerat morbi volutpat habitasse
+          interdum mi aliquam In sed odio nec aliquet.</p>
+        <button class="btn">know more</button>
       </div>
     </div>
-    <!-- End about -->
-    <!-- Start menu -->
-    <div class="menu p-y-128 bg-main">
-      <div class="head text-center mb-16">
-        <h5 class="font-bold text-white">
-          Menu that fits you palatte</h5>
-        <div class="spoon mx-auto">
-          <span></span>
-        </div>
-        <h2>Today’s Special</h2>
+  </div>
+  <!-- End about -->
+  <!-- Start menu -->
+  <div class="menu py-12">
+    <div class="heading text-center">
+      <h5 class="font-bold text-white">
+        Menu that fits you palatte</h5>
+      <div class="spoon mx-auto">
+        <span></span>
       </div>
-      <div class="holder w-70 flex items-center">
-        <div class="list left">
-          <h3 class="text-center mb-12">
+      <h2>Today’s Special</h2>
+    </div>
+    <div class="custom-container lg:flex-row flex-col gap-12 flex justify-between items-center">
+      <fieldset class="left-menu sm:w-3/4 lg:w-1/2 w-full border border-solid p-8 rounded-[35px] border-gold">
+        <legend>
+          <h3 class="text-center p-2">
             juice & drinks </h3>
-          <ul class=" list-none flex flex-col gap-10">
-            <li class="w-full">
-              <div class="item flex justify-between relative items-center gap-8">
-                <h5>king juice</h5> <span class="line"></span>
-                <h5 class="text-right">$56</h5>
-              </div>
-              <h6 class="mt-2">AR | 800 ml</h6>
-            </li>
-            <li class="w-full">
-              <div class="item flex justify-between relative items-center gap-8">
-                <h5>blue berry</h5> <span class="line"></span>
-                <h5 class="text-right">$59</h5>
-              </div>
-              <h6 class="mt-2">AU | Bottle</h6>
-            </li>
-            <li class="w-full">
-              <div class="item flex justify-between relative items-center gap-8">
-                <h5>Rosé tea</h5> <span class="line"></span>
-                <h5 class="text-right">$44</h5>
-              </div>
-              <h6 class="mt-2">FR | 750 ml</h6>
-            </li>
-            <li class="w-full">
-              <div class="item flex justify-between relative items-center gap-8">
-                <h5>chocolate coffee</h5> <span class="line"></span>
-                <h5 class="text-right">$31</h5>
-              </div>
-              <h6 class="mt-2">CA | 750 ml</h6>
-            </li>
-            <li class="w-full">
-              <div class="item flex justify-between relative items-center gap-8">
-                <h5>freezed juice</h5> <span class="line"></span>
-                <h5 class="text-right">$26</h5>
-              </div>
-              <h6 class="mt-2">IE | 750 ml</h6>
-            </li>
-          </ul>
-        </div>
-        <img class="rounded-xl" src="../app/assets/drinks.png" alt="">
-        <div class="list right">
-          <h3 class="text-center mb-12">
-            Cocktails </h3>
-          <ul class=" list-none flex flex-col gap-10">
-            <li class="w-full">
-              <div class="item flex justify-between relative items-center gap-8">
-                <h5>Aperol Spritz</h5> <span class="line"></span>
-                <h5 class="text-right">$20</h5>
-              </div>
-              <h6 class="mt-2">Aperol | Villa Marchesi prosecco | soda | 30ml</h6>
-            </li>
-            <li class="w-full">
-              <div class="item flex justify-between relative items-center gap-8">
-                <h5>Dark 'N' Stormy</h5> <span class="line"></span>
-                <h5 class="text-right">$16</h5>
-              </div>
-              <h6 class="mt-2">Dark rum | Ginger beer | Slice of lime.</h6>
-            </li>
-            <li class="w-full">
-              <div class="item flex justify-between relative items-center gap-8">
-                <h5>Daiquiri</h5> <span class="line"></span>
-                <h5 class="text-right">$10</h5>
-              </div>
-              <h6 class="mt-2">Rum | Citrus juice | Sugar</h6>
-            </li>
-            <li class="w-full">
-              <div class="item flex justify-between relative items-center gap-8">
-                <h5>Old Fashioned</h5> <span class="line"></span>
-                <h5 class="text-right">$31</h5>
-              </div>
-              <h6 class="mt-2">Bourbon | Brown sugar | Angostura Bitters</h6>
-            </li>
-            <li class="w-full">
-              <div class="item flex justify-between relative items-center gap-8">
-                <h5>Negroni</h5> <span class="line"></span>
-                <h5 class="text-right ">$26</h5>
-              </div>
-              <h6 class="mt-2">Gin | Sweet Vermouth | Campari | Orange garnish</h6>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <button class="btn mt-16 text-center mx-auto">view more</button>
-    </div>
-    <!-- End menu -->
-    <!-- Start chef word -->
-    <div class="chef-word relative">
-      <div class="holder p-y-128 w-70 gap[96px] flex justify-between items-center ">
-        <div class="img">
-          <img src="../app/assets/chef-img.png" alt="">
-        </div>
-        <div class="content relative flex flex-col gap-16">
-          <div class="head">
-            <h5>Chef’s Word</h5>
-            <div class="spoon">
-              <span></span>
+        </legend>
+        <ul class="list-none flex flex-col gap-10">
+          <li class="w-full">
+            <div class="item flex justify-between relative items-center gap-8">
+              <h5 class="text-nowrap">king juice</h5><span class="line"></span>
+              <h5 class="text-right">$56</h5>
             </div>
-            <h2>What we believe in</h2>
-          </div>
-          <p class="italic">
-            <img src="../app/assets/quotes.png" alt="" class="quotes inline-block">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit auctor sit .
-            auctor sit iaculis in arcu. Vulputate nulla lobortis mauris eget sit. Nulla scelerisque scelerisque congue
-            ac consequat, aliquam molestie lectus eu. Congue iaculis integer curabitur semper sit nunc.
-          </p>
-          <div class="about-chef">
-            <h4 class="mb-2">Kevin Luo</h4>
-            <h6>Chef & Founder</h6>
-          </div>
-          <img class="chef-sign" src="../app/assets/chef-sign.png" alt="">
-        </div>
+            <h6 class="mt-2 truncate text-wrap">AR | 800 ml</h6>
+          </li>
+          <li class="w-full">
+            <div class="item flex justify-between relative items-center gap-8">
+              <h5 class="text-nowrap">blue berry</h5> <span class="line"></span>
+              <h5 class="text-right">$59</h5>
+            </div>
+            <h6 class="mt-2 truncate text-wrap">AU | Bottle</h6>
+          </li>
+          <li class="w-full">
+            <div class="item flex justify-between relative items-center gap-8">
+              <h5 class="text-nowrap">Rosé tea</h5> <span class="line"></span>
+              <h5 class="text-right">$44</h5>
+            </div>
+            <h6 class="mt-2 truncate text-wrap">FR | 750 ml</h6>
+          </li>
+          <li class="w-full">
+            <div class="item flex justify-between relative items-center gap-8">
+              <h5 class="text-nowrap">chocolate coffee</h5> <span class="line"></span>
+              <h5 class="text-right">$31</h5>
+            </div>
+            <h6 class="mt-2 truncate text-wrap">CA | 750 ml</h6>
+          </li>
+          <li class="w-full">
+            <div class="item flex justify-between relative items-center gap-8">
+              <h5 class="text-nowrap">freezed juice</h5> <span class="line"></span>
+              <h5 class="text-right">$26</h5>
+            </div>
+            <h6 class="mt-2 truncate text-wrap">IE | 750 ml</h6>
+          </li>
+        </ul>
+      </fieldset>
+      <img src="assets/menu-img.png" class="menu-img w-52 hidden 2xl:inline-block" alt="">
+      <fieldset class="right-menu sm:w-3/4 lg:w-1/2 w-full border border-solid p-8 rounded-[35px] border-gold">
+        <legend>
+          <h3 class="text-center p-2">
+            Cocktails </h3>
+        </legend>
+        <ul class=" list-none flex flex-col gap-10">
+          <li class="w-full">
+            <div class="item flex justify-between relative items-center gap-8">
+              <h5 class="text-nowrap">Aperol Spritz</h5> <span class="line"></span>
+              <h5 class="text-right">$20</h5>
+            </div>
+            <h6 class="mt-2 truncate text-wrap">Aperol | Villa Marchesi prosecco | soda | 30ml</h6>
+          </li>
+          <li class="w-full">
+            <div class="item flex justify-between relative items-center gap-8">
+              <h5 class="text-nowrap">Dark 'N' Stormy</h5> <span class="line"></span>
+              <h5 class="text-right">$16</h5>
+            </div>
+            <h6 class="mt-2 truncate text-wrap">Dark rum | Ginger beer | Slice of lime.</h6>
+          </li>
+          <li class="w-full">
+            <div class="item flex justify-between relative items-center gap-8">
+              <h5 class="text-nowrap">Daiquiri</h5> <span class="line"></span>
+              <h5 class="text-right">$10</h5>
+            </div>
+            <h6 class="mt-2 truncate text-wrap">Rum | Citrus juice | Sugar</h6>
+          </li>
+          <li class="w-full">
+            <div class="item flex justify-between relative items-center gap-8">
+              <h5 class="text-nowrap">Old Fashioned</h5> <span class="line"></span>
+              <h5 class="text-right">$31</h5>
+            </div>
+            <h6 class="mt-2 truncate text-wrap">Bourbon | Brown sugar | Angostura Bitters</h6>
+          </li>
+          <li class="w-full">
+            <div class="item flex justify-between relative items-center gap-8">
+              <h5 class="text-nowrap" 5>Negroni</h5> <span class="line"></span>
+              <h5 class="text-right ">$26</h5>
+            </div>
+            <h6 class="mt-2 truncate text-wrap">Gin | Sweet Vermouth | Campari | Orange garnish</h6>
+          </li>
+        </ul>
+      </fieldset>
+    </div>
+    <button class="btn mt-16 text-center mx-auto">view more</button>
+  </div>
+  <!-- End menu -->
+  <!-- Start chef word -->
+  <div class="chef-word BG-2 py-12 relative h-fit lg:h-dvh flex items-center justify-center">
+    <div
+      class="custom-container relative text-center gap-12 md:flex-row md:text-left mx-auto flex flex-col justify-between items-center ">
+      <div class="chef-img img w-5/12 z-10 relative p-3 h-fit  animate-float">
+        <img src="assets/chef-img.png" class="object-cover" alt="">
       </div>
-    </div>
-    <!-- End chef word -->
-    <!-- Start video -->
-    <div class="video w-full">
-      <video src=""></video>
-      <img src="../app/assets/playVid.png" alt="" class="vidState">
-      <span></span>
-    </div>
-    <!-- End video -->
-    <!-- Start Our Laurels -->
-    <div class="our-laurels relative p-y-128">
-      <div class="our-laurels-shape absolute">
-        <div class="circle-shape relative flex justify-center items-center">
+      <div class="relative flex flex-col gap-2 md:gap-16 basis-1/2">
+        <div class="heading">
+          <h5>Chef’s Word</h5>
           <div class="spoon">
             <span></span>
           </div>
-          <div class="spoon">
-            <span></span>
-          </div>
+          <h2>What we believe in</h2>
         </div>
+        <p class="italic quote">
+          <img src="assets/quotes.png" alt="" class="quotes inline-block">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit auctor sit .
+          auctor sit iaculis in arcu. Vulputate nulla lobortis mauris eget sit. Nulla scelerisque scelerisque congue
+          ac consequat, aliquam molestie lectus eu. Congue iaculis integer curabitur semper sit nunc.
+        </p>
+        <div class="chef-info">
+          <h4 class="mb-2">Kevin Luo</h4>
+          <h6>Chef & Founder</h6>
+        </div>
+        <img class="chef-info chef-sign w-24 md:w-40 lg:w-52 absolute right-0 bottom-0" src="assets/chef-sign.png"
+          alt="">
       </div>
-      <div class="holder w-70 flex justify-between items-center">
+    </div>
+  </div>
+  <!-- End chef word -->
+  <!-- Start video -->
+  <div
+    class="video aspect-video relative before:w-full before:h-full before:inset-0 before:absolute before:z-20 before:bg-black before:opacity-40">
+    <!-- <video class="w-full h-full z-20 relative aspect-video" src=""></video> -->
+    <div
+      class="video-playState group/playState z-30 border border-gold cursor-pointer border-solid w-16 h-16 rounded-full absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 flex justify-center items-center">
+      <svg class="fill-gold ml-1 group-hover/playState:scale-110 group-active/playState:scale-100 duration-150"
+        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path d="M7 6v12l10-6z"></path>
+      </svg>
+    </div>
+    <img src="assets/video-thumbnail.png" alt="" class="absolute  z-10 w-full h-full">
+  </div>
+  <!-- End video -->
+  <!-- Start Our Laurels -->
+  <div class="our-laurels overflow-hidden BG-1 relative py-12">
+    <div class="heading shape-container flex justify-center items-center">
+      <div class="spoon">
+        <span></span>
+      </div>
+      <div class="spoon">
+        <span></span>
+      </div>
+      <div class="circle-shape">
+        <span></span>
+        <span>d</span>
+        <span>e</span>
+        <span>l</span>
+        <span>i</span>
+        <span>g</span>
+        <span>h</span>
+        <span>t</span>
+        <span></span>
+        <span>i</span>
+        <span>n</span>
+        <span></span>
+        <span>e</span>
+        <span>v</span>
+        <span>e</span>
+        <span>r</span>
+        <span>y</span>
+        <span></span>
+        <span>b</span>
+        <span>i</span>
+        <span>t</span>
+        <span>e</span>
+      </div>
+    </div>
+    <div class="custom-container">
+      <div class=" flex justify-between lg:justify-center items-center">
         <div class="content flex flex-col gap-16">
-          <div class="head">
+          <div class="heading">
             <h5>Awards & recognition</h5>
-            <div class="spoon">
+            <div class="spoon m-0">
               <span></span>
             </div>
             <h2>Our Laurels</h2>
           </div>
-          <div class="laurels flex flex-wrap gap-x-8 gap-y-16">
-            <div class="item flex gap-3">
-              <img src="../app/assets/number-2.png" alt="">
+          <div class="laurels flex justify-center items-center flex-wrap gap-x-8 gap-y-16">
+            <div class="item flex gap-8 items-center justify-center w-80">
+              <img src="assets/number-2.png" class="w-24" alt="">
               <div class="text">
                 <h5>Bib Gourmond</h5>
                 <p>Lorem ipsum dolor sit amet, consectetur.</p>
               </div>
             </div>
-            <div class="item flex gap-3">
-              <img src="../app/assets/number-1.png" alt="">
+            <div class="item flex gap-8 items-center justify-center w-80">
+              <img src="assets/number-1.png" class="w-24" alt="">
               <div class="text">
                 <h5>Rising Star</h5>
                 <p>Lorem ipsum dolor sit amet, consectetur.</p>
               </div>
             </div>
-            <div class="item flex gap-3">
-              <img src="../app/assets/number-5.png" alt="">
+            <div class="item flex gap-8 items-center justify-center w-80">
+              <img src="assets/number-5.png" class="w-24" alt="">
               <div class="text">
                 <h5>AA Hospitality</h5>
                 <p>Lorem ipsum dolor sit amet, consectetur.</p>
               </div>
             </div>
-            <div class="item flex gap-3">
-              <img src="../app/assets/number-3.png" alt="">
+            <div class="item flex gap-8 items-center justify-center w-80">
+              <img src="assets/number-3.png" class="w-24" alt="">
               <div class="text">
                 <h5>Outstanding Chef</h5>
                 <p>Lorem ipsum dolor sit amet, consectetur.</p>
@@ -295,82 +342,86 @@
             </div>
           </div>
         </div>
-        <img src="../app/assets/our-laurels.png" alt="">
+        <img src="assets/our-laurels.png" class="laurels-img hidden lg:block lg:w-80" alt="">
       </div>
     </div>
-    <!-- End Our Laurels -->
-    <!-- Start instagram corner -->
-    <div class="insta">
-      <div class="holder flex gap-16 justify-between items-center py-16">
-        <div class="content flex flex-col gap-6 ">
-          <div class="head">
-            <h5>Instagram</h5>
-            <div class="spoon">
-              <span></span>
-            </div>
-            <h2>Photo Gallery</h2>
+  </div>
+  <!-- End Our Laurels -->
+  <!-- Start instagram corner -->
+  <div class="insta py-8 overflow-hidden">
+    <div class="custom-container flex gap-8 justify-between items-center flex-col 2xl:flex-row py-8">
+      <div
+        class="insta-text 2xl:basis-5/12 md:w-1/2 w-full flex flex-col items-center justify-center text-center lg:items-start lg:justify-between lg:text-left gap-6">
+        <div class="heading">
+          <h5>Instagram</h5>
+          <div class="spoon">
+            <span></span>
           </div>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Volutpat mattis ipsum turpis elit elit scelerisque
-            egestas mu.</p>
-          <button class="btn">View More</button>
+          <h2>Photo Gallery</h2>
         </div>
-        <div class="photos flex gap-8">
-          <div class="insta-photo">
-            <img src="../app/assets/photo-1.png" alt="">
-            <div class="over-lay"></div>
-            <div class="inst-i"></div>
-          </div>
-          <div class="insta-photo">
-            <img src="../app/assets/photo-2.png" alt="">
-            <div class="over-lay"></div>
-            <div class="inst-i"></div>
-          </div>
-          <div class="insta-photo">
-            <img src="../app/assets/photo-3.png" alt="">
-            <div class="over-lay"></div>
-            <div class="inst-i"></div>
-          </div>
-          <div class="insta-photo">
-            <img src="../app/assets/photo-4.png" alt="">
-            <div class="over-lay"></div>
-            <div class="inst-i"></div>
-          </div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Volutpat mattis ipsum turpis elit elit scelerisque
+          egestas mu.</p>
+        <button class="btn">View More</button>
+      </div>
+      <div class="photos overflow-hidden grid grid-cols-2 md:grid-cols-4 gap-4 h-fit">
+        <div
+          class="insta-photo w-32 md:w-44 lg:w-44 translate-x-72 -rotate-12 relative group/insta before:w-full before:h-full before:bg-black before:opacity-0 hover:before:opacity-40 before:z-10 before:absolute before:duration-150 overflow-hidden ">
+          <img src="assets/photo-1.png" class=" group-hover/insta:scale-110 h-full object-cover duration-150" alt="">
+          <div class="insta-i group-hover/insta:opacity-100 opacity-0 z-10"></div>
+        </div>
+        <div
+          class="insta-photo w-32 md:w-44 lg:w-44 translate-x-24 rotate-12 relative group/insta before:w-full before:h-full before:bg-black before:opacity-0 hover:before:opacity-40 before:z-10 before:absolute before:duration-150 overflow-hidden ">
+          <img src="assets/photo-2.png" class="group-hover/insta:scale-110 h-full object-cover duration-150" alt="">
+          <div class="insta-i group-hover/insta:opacity-100 opacity-0 z-10"></div>
+        </div>
+        <div
+          class="insta-photo w-32 md:w-44 lg:w-44 -translate-x-24 -rotate-6 relative group/insta before:w-full before:h-full before:bg-black before:opacity-0 hover:before:opacity-40 before:z-10 before:absolute before:duration-150 overflow-hidden ">
+          <img src="assets/photo-3.png" class="group-hover/insta:scale-110 h-full object-cover duration-150" alt="">
+          <div class="insta-i group-hover/insta:opacity-100 opacity-0 z-10"></div>
+        </div>
+        <div
+          class=" insta-photo w-32 md:w-44 lg:w-44 -translate-x-72 rotate-6 relative group/insta before:w-full before:h-full before:bg-black before:opacity-0 hover:before:opacity-40 before:z-10 before:absolute before:duration-150 overflow-hidden ">
+          <img src="assets/photo-4.png" class="group-hover/insta:scale-110 h-full object-cover duration-150 " alt="">
+          <div class="insta-i group-hover/insta:opacity-100 opacity-0 z-10"></div>
         </div>
       </div>
     </div>
-    <!-- End instagram corner -->
-    <!-- Start find us -->
-    <div class="find-us">
-      <div class="holder w-full p-y-128 flex justify-between items-center gap-8">
-        <div class="content flex flex-col gap-16">
-          <div class="head">
-            <h5>Contact</h5>
-            <div class="spoon">
-              <span></span>
-            </div>
-            <h2>Find Us</h2>
+  </div>
+  <!-- End instagram corner -->
+  <!-- Start find us -->
+  <div class="find-us py-8">
+    <div class="custom-container flex justify-between items-center gap-8">
+      <div class="content flex flex-col justify-between">
+        <div class="heading">
+          <h5>Contact</h5>
+          <div class="spoon">
+            <span></span>
           </div>
-          <div class="text">
-            <p class="mb-8">Lane Ends Bungalow, Whatcroft Hall Lane, Rudheath, CW9 7SG</p>
-            <div class="dates flex flex-col gap-4">
-              <h5>Opening Hours</h5>
-              <h6 class="text-white">Mon - Fri: 10:00 am - 02:00 am</h6>
-              <h6 class="text-white">Sat - Sun: 10:00 am - 03:00 am</h6>
-            </div>
+          <h2>Find Us</h2>
+        </div>
+        <div class="text flex gap-6 flex-col">
+          <p>Lane Ends Bungalow, Whatcroft Hall Lane, Rudheath, CW9 7SG</p>
+          <div class="dates flex flex-col gap-4">
+            <h5>Opening Hours</h5>
+            <h6 class="text-white">Mon - Fri: 10:00 am - 02:00 am</h6>
+            <h6 class="text-white">Sat - Sun: 10:00 am - 03:00 am</h6>
           </div>
           <button class="btn">Visit Us</button>
         </div>
-        <div class="img">
-          <img src="../app/assets/limon-juice.png" alt="">
-        </div>
+      </div>
+      <div class="img hidden md:block w-5/12 z-10 relative p-3 h-fit  animate-float">
+        <img src="assets/limon-juice.png" class="object-cover" alt="">
       </div>
     </div>
-    <!-- End find us -->
-    <!-- Start footer -->
-    <footer class="footer relative">
-      Start subscribe
-      <div class="subscribe">
-        <div class="holder w-70 borderGold relative p-16 flex flex-col gap-16 justify-between items-center">
+  </div>
+  <!-- End find us -->
+  <!-- Start footer -->
+  <footer class="footer BG-3 relative py-12">
+    <div class="custom-container m-24 flex flex-col justify-center items-center gap-16">
+      <!-- Start subscribe -->
+      <div
+        class="subscribe bg-dark border border-solid border-gold relative w-full p-6 md:p-12  flex flex-col gap-16 justify-between items-center">
+        <div class="w-5/6 flex flex-col gap-4">
           <div class="text text-center">
             <div class="head mb-6">
               <h5>Newsletter</h5>
@@ -381,16 +432,24 @@
             </div>
             <h6>And never miss latest Updates!</h6>
           </div>
-          <div class="input flex items-center justify-center gap-8 ">
-            <input class="flex-grow bg-transparent borderGold" type="email" name="" id="" placeholder="Email Address">
-            <button class="btn">Subscribe</button>
+          <div class="input flex flex-wrap md:flex-nowrap items-center w-full justify-center gap-8 md:gap-4">
+            <input class="flex-1 p-2 bg-transparent border border-gold border-solid" type="email" name="" id=""
+              placeholder="Email Address">
+            <button class="btn w-full md:w-fit">Subscribe</button>
           </div>
         </div>
       </div>
-      End subscribe
-      <div class="holder w-70 p-y-128 flex justify-between gap-4">
-        <span id="scroll-top" class="word-shape top absolute">top</span>
-        <div class="box text-center">
+      <!-- End subscribe -->
+      <div class="custom-container flex justify-between flex-wrap lg:flex-nowrap gap-4">
+        <div class="box ">
+          <h2 class="uppercase">gericht</h2>
+          <h6 class="text-white">"The best way to find yourself is to lose yourself in the service of others.”</h6>
+          <div class="spoon">
+            <span></span>
+          </div>
+
+        </div>
+        <div class="box">
           <h4 class="text-white">Contact Us</h4>
           <div>
             <h6 class="mt-6 mb-2">9 W 53rd St, New York, NY 10019, USA</h6>
@@ -398,19 +457,7 @@
             <h6>+1 212-555-1230</h6>
           </div>
         </div>
-        <div class="box middle text-center">
-          <h2 class="uppercase">gericht</h2>
-          <h6 class="text-white">"The best way to find yourself is to lose yourself in the service of others.”</h6>
-          <div class="spoon">
-            <span></span>
-          </div>
-          <div class="socials flex items-center justify-center gap-6">
-            <img src="../app/assets/u_facebook-f.svg" alt="" class="i">
-            <img src="../app/assets/twitter.svg" alt="" class="i">
-            <img src="../app/assets/insta.svg" alt="" class="i">
-          </div>
-        </div>
-        <div class="box text-center">
+        <div class="box">
           <h4 class="text-white">Working Hours</h4>
           <div>
             <h6 class="mt-6 mb-2">Monday-Friday:</h6>
@@ -420,10 +467,15 @@
           </div>
         </div>
       </div>
-    </footer>
-    <!-- End footer -->
-  </div>
-  </div>
+      <div class="socials flex items-center justify-center mx-auto gap-6">
+        <img src="assets/u_facebook-f.svg" alt="" class="i">
+        <img src="assets/twitter.svg" alt="" class="i">
+        <img src="assets/insta.svg" alt="" class="i">
+      </div>
+    </div>
+    </div>
+  </footer>
+  <!-- End footer -->
 </body>
 
 </html>

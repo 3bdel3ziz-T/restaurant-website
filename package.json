@@ -4,12 +4,15 @@
   "main": "app/src/script.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "w-css": "tailwindcss -i ./app/src/css/input.css -o ./dist/output.css --watch"
+    "tw-w": "tailwindcss -i ./app/src/css/input.css -o ./dist/output.css --watch"
   },
   "author": "",
   "license": "ISC",
   "description": "",
   "devDependencies": {
     "tailwindcss": "^3.4.15"
+  },
+  "dependencies": {
+    "gsap": "^3.12.5"
   }
 }

@@ -1,16 +1,54 @@
 @use "variables" as *;
 
 // start components
+
+.photos {
+  .insta-i {
+    width: 43.33px;
+    height: 43.33px;
+    border: 5px solid white;
+    border-radius: 15px;
+    transition: $transition;
+    opacity: 0;
+    z-index: 10;
+    @extend .absolute-center;
+    &::before {
+      content: "";
+      width: 23px;
+      height: 23px;
+      border: 4px solid white;
+      border-radius: 50%;
+      @extend .absolute-center;
+    }
+    &::after {
+      content: "";
+      width: 5px;
+      height: 5px;
+      background-color: white;
+      border-radius: 50%;
+      position: absolute;
+      top: 3.5px;
+      right: 3.5px;
+    }
+  }
+  &:has(.insta-photo:hover) {
+    .insta-photo:not(.insta-photo:hover) {
+      filter: blur(3px);
+    }
+  }
+}
+
 .spoon {
+  $spoonColor:$colorGold;
   position: relative;
   width: 40px;
   height: 9px;
   margin-top: 8px;
   margin-bottom: 8px;
-  @media ($Mob_Ipad_Mid_Medias) {
-    margin-left: auto;
-    margin-right: auto;
-  }
+  // @media ($Mob_Ipad_Mid_Medias) {
+  //   margin-left: auto;
+  //   margin-right: auto;
+  // }
   span {
     width: 13px;
     height: 8px;
@@ -20,7 +58,7 @@
     top: 50%;
     right: 0;
     border: 1px solid;
-    border-color: $colorGold;
+    border-color: $spoonColor;
     display: inline-block;
     &:before,
     &:after {
@@ -31,7 +69,7 @@
       top: 50%;
     }
     &:before {
-      background: $colorGold;
+      background: $spoonColor;
       width: 5px;
       height: 1.8px;
       left: -5.2px;
@@ -40,7 +78,7 @@
       width: 22px;
       height: 3px;
       border: 1px solid;
-      border-color: $colorGold;
+      border-color: $spoonColor;
       right: calc(100% + 5px);
     }
   }
@@ -63,39 +101,9 @@
     outline: 2px solid $colorGold;
   }
 }
-.img {
-  width: 667px;
-  height: 736px;
-  position: relative;
-  &::before,
-  &::after {
-    content: "";
-    display: block;
-    width: 445px;
-    height: 445px;
-    position: absolute;
-    background-color: $colorGold;
-  }
-  &::before {
-    top: 0;
-    right: 0;
-  }
-  &::after {
-    bottom: 0;
-    left: 0;
-  }
-  img {
-    width: calc(100% - 48px);
-    height: calc(100% - 48px);
-    z-index: 2;
-    border-top-left-radius: 100px;
-    border-bottom-right-radius: 100px;
-    @extend .absolute-center;
-  }
-}
+
 .word-shape {
   width: fit-content;
-  transform: translateY(60px);
   color: $colorGold;
   text-transform: uppercase;
   font-weight: bold;
@@ -112,8 +120,8 @@
     height: 61px;
     display: block;
     position: absolute;
-    top: -85px;
     left: 50%;
+    top: -130%;
     background: linear-gradient(
       to bottom,
       #dcca87,
@@ -122,54 +130,58 @@
     );
   }
 }
-.absolute-center {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+
+.img {
+  &::before,
+  &::after {
+    content: "";
+    display: block;
+    width: 50%;
+    height: 50%;
+    position: absolute;
+    background-color: $colorGold;
+  }
+  &::before {
+    top: 0;
+    right: 0;
+  }
+  &::after {
+    bottom: 0;
+    left: 0;
+  }
+  img {
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    border-top-left-radius: 10%;
+    border-bottom-right-radius: 10%;
+    // @extend .absolute-center;
+    position: relative;
+    display: block;
+  }
 }
-//Start helper classes
-.w-70 {
-  @media (min-width: 1921px) {
-    width: 1300px;
-  }
 
-  @media (max-width: 1920px) {
-    width: 70%;
-  }
-
+.custom-container {
+  width: 100%;
   margin: 0 auto;
-}
-.p-y-128 {
-  padding: 128px 0;
-  @media ($ipad_Mob_Media) {
-    padding: 70px 0;
+  // overflow: hidden;
+  @media (max-width: 520px) {
+    padding: 0 20px;
+  }
+  @media (max-width: 768px) {
+    padding: 0 25px;
+  }
+  @media (max-width: 991px) {
+    padding: 0 30px;
+  }
+  @media (max-width: 1024px) {
+    padding: 0 40px;
+  }
+  @media (max-width: 1200px) {
+    padding: 0 45px;
+  }
+  @media (min-width: 1201px) {
+    width: 1000px;
   }
 }
-.fs-16 {
-  font-size: 16px;
-}
-.color-gold {
-  color: $colorGold;
-}
-.open-sans {
-  font-family: $secondFont;
-}
-.text-color {
-  color: $textColor;
-}
-.bg-main {
-  background-color: $bgColor;
-}
-.borderGold {
-  border: 2px solid rgba($colorGold, 20%);
-}
-// End helper classes
-%background {
-  background-position: center;
-  background-size: cover;
-}
-// End components
-.page-container {
-  background-color: $bgColor;
-}
+

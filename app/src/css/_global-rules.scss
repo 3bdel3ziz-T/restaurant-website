@@ -10,6 +10,13 @@ html {
 // Start elements rules
 body {
   font-family: $mainFamily;
+  background-color: $Dark;
+  width: 100dvw;
+  height: auto;
+  overflow: hidden;
+  overflow-y: auto;
+  margin: 0;
+  padding: 0;
 }
 img {
   user-select: none;
@@ -21,14 +28,36 @@ p {
   font-weight: 400;
   line-height: 28px;
 }
-h1 {
-  font-size: 90px !important;
-  font-weight: 700 !important;
-  line-height: 117px;
+input {
+  caret-color: $colorGold;
+  outline: none;
+  border: none;
   color: $colorGold;
-  @media ($ipad_Mob_Media) {
-    font-size: 80px !important;
-    line-height: 80px;
+}
+h1 {
+  font-size: 50px;
+  font-weight: 700;
+  // line-height: 117px;
+  color: $colorGold;
+  //  $not_mob : "(min-width: 520px)";
+  // $not_sm_ipad: "(min-width: 768px)";
+  // not_sm_ipad: "(min-width: 991px)";
+  // $not_sm_labTop: "(min-width: 1024px)";
+  // $max_media: "(min-width: 1200px)";
+  @media ($not_mob) {
+    font-size: 65px;
+  }
+  @media ($not_sm_ipad) {
+    font-size: 75px;
+  }
+  @media (not_sm_ipad) {
+    font-size: 80px;
+  }
+  @media ($not_sm_labTop) {
+    font-size: 90px;
+  }
+  @media ($max_media) {
+    font-size: 95px;
   }
 }
 h2 {
@@ -73,7 +102,7 @@ h6 {
   width: 20px;
 }
 ::-webkit-scrollbar-track {
-  background-color: $bgColor;
+  background-color: $Dark;
 }
 ::-webkit-scrollbar-thumb {
   height: 300px;
@@ -81,4 +110,9 @@ h6 {
 }
 ::-webkit-scrollbar-thumb:hover {
   background-color: $colorGold;
+}
+
+::selection {
+  background-color: $colorGold;
+  color: $Dark;
 }

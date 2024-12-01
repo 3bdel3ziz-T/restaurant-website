@@ -1,21 +1,27 @@
 $colorGold: #dcca87;
 $textColor: #aaa;
-$bgColor: #0c0b08;
+$Dark: #0c0b08;
 $transition: 0.35s;
 $mainFamily: "Cormorant Upright";
 $secondFont: "open sans";
 $mob_Media: "max-width: 425px";
-$ipad_Media: "(min-width: 426px) and (max-width: 821px)";
-$ipad_Mob_Media: "max-width: 821px";
+$ipad_Media: "(min-width: 426px) and (max-width: 990px)";
+$ipad_Mob_Media: "max-width: 991px";
 $Mob_Ipad_Mid_Medias: "max-width: 1025px";
 $max_media: "max-width: 1919px";
 
-%BG-1 {
-  background-image: url(../../assets/BG-1.png);
+$not_mob: "(min-width: 520px)";
+$not_sm_ipad: "(min-width: 768px)";
+$not_max_ipad: "(min-width: 991px)";
+$not_sm_labTop: "(min-width: 1024px)";
+$max_media: "(min-width: 1200px)";
+
+.absolute-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
-%BG-2 {
-  background-image: url(../../assets/BG-2.png);
-}
-%BG-3 {
-  background-image: url(../../assets/BG-3.png);
-};
+//Start helper classes
+// End helper classes
+// End components
